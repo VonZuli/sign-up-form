@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --main-form-color: white;
+  --secondary-form-color: rgb(249, 250, 251);
+  --tertiary-form-color: rgb(117, 147, 185);
+  --main-text-color: white;
+  --form-text-color: black;
+  --title-background: rgba(0, 0, 0, 0.4);
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+  /* background-image: url(images/g2dtw3qtkv821.jpg); */
+  display: flex;
+  flex-direction: row;
+}
+
+#title-section {
+  color: var(--main-text-color);
+  background-image: url(images/g2dtw3qtkv821.jpg);
+  min-width: 40%;
+  height: 98vh;
+}
+#title-section > h1 {
+  background-color: var(--title-background);
+  font-size: 70px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+#main-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+#main-content > * {
+  padding: 20px;
+  font-weight: bold;
+}
+#desc-section {
+  background-color: var(--secondary-form-color);
+  padding-top: 100px;
+}
+
+#form-section {
+  background-color: var(--main-form-color);
+  display: flex;
+  flex-direction: column;
+}
+#form-section > form {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 10px;
+
+}
+
+form > label {
+  max-width: fit-content;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  order: 0;
+  flex: 1 1 35%;
+  align-self: flex-start;
+  text-transform: uppercase;
+
+}
+form > input {
+  display: flex;
+  flex-flow: column wrap;
+  width: min-content;
+  border: 2px solid #e5e7eb;
+  margin-bottom: 10px;
+  order: 0;
+  flex: 1 1 35%;
+  align-self: flex-start;
+  
+  
+}
+.input{
+  display: flex;
+  flex-flow: column wrap;
+  width: 40%;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  opacity: 70%;
+  padding: 5px;
+}
+
+.form-title{
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+form > input:focus {
+  border: 2px solid red;
+}
+
+#footer-section {
+  background-color: var(--secondary-form-color);
+  /* box-shadow: 10px 5px 20px 0px var(--tertiary-form-color); */
+  flex-basis: 100%;
+}
+#footer-section > button {
+  background-color: var(--tertiary-form-color);
+  color: var(--main-text-color);
+  border-radius: 5px;
+  border: none;
+  box-shadow: 2px 2px rgb(0, 0, 0, 0.1);
+  font-family: "Josefin Sans", sans-serif;
+  padding: 10px 30px;
+  margin: 10px 0px 10px 10px;
+}
+
+#footer-section > p > span > a {
+  color: var(--tertiary-form-color);
+  text-decoration: none;
+}
