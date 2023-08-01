@@ -12,13 +12,16 @@
 }
 
 body {
-  /* background-image: url(images/g2dtw3qtkv821.jpg); */
   display: flex;
   flex-direction: row;
   background-color: lavender;
-  min-width: 680px;
 }
-
+.match{
+  border: 2px solid green;
+}
+.error{
+  border: 2px solid red;
+}
 #title-section {
   color: var(--main-text-color);
   background-image: url(images/g2dtw3qtkv821.jpg);
@@ -33,7 +36,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  align-content: center;
 }
 #title-section > h1 > img {
   max-width: 70px;
@@ -42,6 +44,7 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+  max-width: fit-content;
 }
 #main-content > * {
   padding: 20px;
@@ -67,9 +70,6 @@ body {
   padding-left: 10px;
   color: var(--main-text-color);
 }
-/* #signup-form {
-  max-width: 80%
-} */
 
 form > label {
   max-width: fit-content;
@@ -93,7 +93,6 @@ form > input {
 }
 .input > input {
   border-radius: 4px;
-  max-width: 300px;
 }
 .input {
   display: flex;
@@ -108,8 +107,11 @@ form > input {
   margin-left: 20px;
 }
 
-form > input:focus {
-  border: 2px solid red;
+input:focus {
+  outline: none;
+  border: 2px solid blue;
+  height: 2rem;
+  box-shadow: 1px 2px 3px 4px var(--title-background);
 }
 
 #footer-section {
@@ -137,15 +139,30 @@ form > input:focus {
 }
 
 @media screen and (max-width: 800px) {
+  body {
+    flex-direction: column;
+  }
+  #title-section {
+    max-height: 250px;
+    padding-top: 0;
+    background-position: center;
+    background-size: cover;
+  }
+
   #signup-form {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
     align-content: center;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+  #desc-section {
+    padding: 0 10px;
   }
   .input {
-    max-width: max-content;
+    justify-content: center;
     flex: 1 2 100%;
   }
   .input:nth-child(even) {
@@ -153,10 +170,8 @@ form > input:focus {
   }
 }
 
-@media screen and (min-width:1500px){
+@media screen and (min-width: 1500px) {
   #signup-form {
     max-width: 50%;
   }
-
-
 }
