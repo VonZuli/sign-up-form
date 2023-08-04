@@ -16,7 +16,7 @@ body {
   flex-direction: row;
   background-color: lavender;
 }
-.match{
+.valid{
   border: 2px solid green;
 }
 .error{
